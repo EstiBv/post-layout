@@ -1,0 +1,37 @@
+@import "../core/functions";
+
+@mixin button-styles {
+    background-color: $secondary-medium;
+    color: $white;
+    font-family: $sansSerif-initial;
+    font-size: rem(12);
+    border: none;
+    border-radius: rem(4);
+    padding: rem(4);
+}
+@mixin articleBasicStyle {
+    font-family: $sansSerif-initial;
+    color: $primary-medium;
+}
+@mixin inputsFormBasicStyle {
+    border: none;
+    border-radius: rem(4);
+    padding: rem(10);
+    background-color: $primary-light;
+    font-family: $sansSerif-secondary;
+    text-align: justify;
+}
+@mixin h3Style {
+    color: $primary-medium;
+    font-family: $sansSerif-initial;
+    font-weight: 100;
+    margin-bottom: rem(16);
+}
+@mixin h4Style {
+    font-family: $sansSerif-initial;
+    text-transform: uppercase;
+    font-size: rem(14);
+    margin-bottom: rem(28);
+    margin-top: rem(32);
+    color: $white;
+}

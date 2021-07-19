@@ -1,0 +1,122 @@
+@import "../../../core/functions";
+@import "../../../core/mixins";
+@import "../../../core/variables";
+
+.footer-information {
+    display: flex;
+    flex-direction: row wrap;
+    text-align: justify;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: rem(12) rem(48) rem(12) rem(48);
+    &__address {
+        font-style: normal;
+        font-family: $sansSerif-secondary;
+        padding: 0 rem(70) 0 0;
+        border-right: rem(1) solid #d6d7d7;
+        width: 40%;
+        &--title {
+            @include h4Style;
+            text-decoration: none;
+            font-style: normal;
+        }
+        &--text,
+        &--address,
+        &--contact {
+            margin-bottom: rem(12);
+            width: 100%;
+            color: $white;
+        }
+        &--address:nth-child(n),
+        &--text:nth-child(n),
+        &--contact:nth-child(n) {
+            font-size: rem(14);
+        }
+        &--rrss {
+            display: flex;
+            flex-direction: row;
+            &--link {
+                width: rem(38);
+                height: rem(34);
+                background-color: $secondary-dark;
+                border: none;
+                border-radius: rem(4);
+                padding: rem(8);
+                text-align: center;
+                margin: rem(16) rem(12) rem(50) 0;
+            }
+        }
+    }
+    &__fast-access {
+        padding: 0 rem(30) 0 rem(30);
+        align-items: center;
+        border-right: rem(1) solid #d6d7d7;
+        font-family: $sansSerif-secondary;
+        &--title {
+            @include h4Style;
+            &--list {
+                font-size: rem(14);
+                list-style: none;
+                font-family: $sansSerif-initial;
+                &--item-link {
+                    color: $white;
+                    text-decoration: none;
+                    margin-bottom: rem(12);
+                }
+                &--item-link:hover {
+                    text-decoration: underline;
+                }
+            }
+            &--list li {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    &__recentPost {
+        padding: 0 rem(20) 0 rem(70);
+        &--title {
+            @include h4Style;
+            &--list {
+                font-family: $sansSerif-initial;
+                font-size: rem(14);
+                &--item a {
+                    color: $white;
+                    text-decoration: none;
+                }
+                &--data {
+                    color: $primary-light;
+                    display: block;
+                }
+            }
+            &--list li {
+                display: block;
+                list-style: none;
+                height: rem(50);
+                background-color: $secondary-dark;
+                border-radius: rem(4);
+                padding: rem(6) rem(22) rem(6) rem(22);
+                margin-bottom: rem(20);
+                text-align: justify;
+            }
+            &--list li:hover {
+                background-color: transparent;
+                border-radius: rem(4);
+                transform: scale(1.05);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+// icons contact
+.fa-facebook-f,
+.fa-twitter,
+.fa-linkedin-in,
+.arrow {
+    color: $white;
+}
+
+.fa-facebook-f:hover,
+.fa-twitter:hover,
+.fa-linkedin-in:hover {
+    color: $secondary-ligth;
+}

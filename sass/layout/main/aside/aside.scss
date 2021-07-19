@@ -1,0 +1,119 @@
+@import "../../../core/functions";
+@import "../../../core/mixins";
+@import "../../../core/variables";
+
+.main-aside {
+    width: 30%;
+    margin: rem(76);
+    margin-left: rem(50);
+    margin-right: 0;
+    &__form {
+        padding-bottom: rem(16);
+        border-bottom: rem(1) solid #d6d7d7;
+        &--label-input {
+            background-color: $primary-light;
+            padding: rem(8);
+            border-radius: rem(4) 0 0 rem(4);
+        }
+        &--input {
+            width: 70%;
+            @include inputsFormBasicStyle;
+            padding: 0;
+            margin-bottom: rem(42);
+            top: 1.3em;
+        }
+        &--button-search {
+            cursor: pointer;
+            background-color: $secondary-medium;
+            border: none;
+            border-radius: 0 rem(4) rem(4) 0;
+            padding: rem(10.5);
+            color: $primary-light;
+            text-align: center;
+        }
+        &--button-search:hover {
+            color: $primary-light;
+            background-color: $secondary-ligth;
+        }
+    }
+
+    &__categories {
+        padding: rem(24) 0 rem(24) 0;
+        margin-bottom: rem(16);
+        border-bottom: rem(1) solid #d6d7d7;
+        &--title {
+            @include h3Style;
+        }
+        &--list {
+            margin-bottom: rem(16);
+            list-style-type: none;
+            &--item {
+                margin-bottom: rem(8);
+                &--link {
+                    text-decoration: none;
+                    font-family: $sansSerif-initial;
+                    color: $secondary-medium;
+                }
+            }
+            &--item:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__post {
+        padding-bottom: rem(16);
+        margin-bottom: rem(16);
+        border-bottom: rem(1) solid #d6d7d7;
+        &--title {
+            @include h3Style;
+        }
+        &--list {
+            list-style-type: none;
+            font-family: $sansSerif-initial;
+            color: $secondary-medium;
+            margin-bottom: rem(20);
+
+            &--item {
+                display: block;
+                cursor: pointer;
+            }
+
+            &--item:hover {
+                background-color: $primary-light;
+                color: $secondary-dark;
+                transform: scale(1);
+                transition: all 0.3s ease-in-out;
+                padding: rem(12);
+            }
+
+            &--item-time {
+                display: block;
+                color: $primary-medium;
+                margin-bottom: rem(14);
+            }
+        }
+    }
+
+    &__tags {
+        &--title {
+            @include h3Style;
+        }
+    }
+    &__tags-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        &--button {
+            @include button-styles;
+            cursor: pointer;
+            margin: rem(4);
+        }
+        &--button:hover {
+            background-color: $secondary-ligth;
+            color: $secondary-dark;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

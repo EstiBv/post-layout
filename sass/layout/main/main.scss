@@ -1,0 +1,10 @@
+@import "../../core/functions";
+@import "../../core/mixins";
+@import "../../core/variables";
+
+.main {
+    padding: rem(12) rem(75) rem(12) rem(75);
+    display: flex;
+    flex-direction: row;
+    line-height: rem(22);
+}

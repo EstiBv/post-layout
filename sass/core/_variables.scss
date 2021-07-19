@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+// Colors - Basic
+$black: #000;
+$white: #fff;
+
+// Colors - Primary (B&W)
+$primary-dark: #1b1b1b;
+$primary-medium: #6d6e6e;
+$primary-light: #d6d7d7;
+
+// Colors - Secondary (Blue)
+$secondary-dark: #0c2958;
+$secondary-medium: #04499e;
+$secondary-ligth: #5790d6;
+
+// Fonts
+$serif-inital: Georgia, Arial;
+$sansSerif-initial: Arial, Helvetica;
+$sansSerif-secondary: Helvetica, Georgia;

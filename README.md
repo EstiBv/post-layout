@@ -65,4 +65,5 @@ Adjunto algunos desafíos y conclusiones para contextualizar la prueba y dar a c
 🏋🏽 Y aunque me hubiese gustado completar la prueba realizado un diseño mas abarcable para diferentes dispositivos, aplicando mediaqueries o lograr alcanzar todos los objetivos (como aplicar JQuery), dotar de cierta funcionalidad a la web, como por ejemplo habilitar el uso del formulario, dotar de eventos a los botones, y complementar o justificar cierta interacción con alguna animación, etc. Entrego este reto **agradecida por la oportunidad y contenta de seguir recibiedo estímulos que continúan motivando mi objetivo laboral**.
 
 🙂 Muchas gracias
-# post-layout
+
+#

@@ -1,0 +1,253 @@
+@import "../../../core/functions";
+@import "../../../core/mixins";
+@import "../../../core/variables";
+
+// This stylesheet is divided by comments (with the same tags as the structure from HTML -> contentInfo -> main)
+
+.main-content-info {
+    width: 70%;
+    text-align: justify;
+    // < SECTION > pages
+    &__pages {
+        text-transform: uppercase;
+        font-family: $sansSerif-initial;
+        font-size: rem(10);
+        margin: rem(24);
+        margin-left: 0;
+        text-decoration: none;
+        &--01,
+        &--02 {
+            text-decoration: none;
+            color: $primary-medium;
+        }
+        &--01:hover,
+        &--02:hover {
+            color: $secondary-dark;
+            font-weight: bold;
+        }
+        &--separatorPages {
+            margin: 0 rem(12) 0 rem(12);
+        }
+    }
+    // < SECTION> info initial
+    &__initial {
+        margin: rem(32) 0 rem(32) 0;
+        &--image {
+            width: 100%;
+        }
+        &--article-01 {
+            margin-top: rem(24);
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: rem(2);
+            &--title {
+                grid-column-start: 2;
+                grid-column-end: 9;
+                grid-row-start: 1;
+                text-transform: capitalize;
+                font-size: rem(24);
+                font-family: $sansSerif-initial;
+                font-weight: 300;
+                line-height: rem(28);
+            }
+            &--time {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                color: $primary-medium;
+                text-transform: uppercase;
+                font-family: $sansSerif-initial;
+                line-height: rem(30);
+                &--day {
+                    display: block;
+                    font-weight: 100;
+                    font-size: rem(32);
+                    font-family: $sansSerif-secondary;
+                }
+                &--month {
+                    font-size: rem(16);
+                }
+            }
+            &--blockquote {
+                grid-column-start: 2;
+                grid-column-end: 8;
+                grid-row-start: 2;
+                font-family: $sansSerif-initial;
+            }
+            &--blockquote a {
+                color: $secondary-medium;
+                text-decoration: none;
+            }
+            &--icons {
+                grid-column-start: 9;
+                grid-column-end: 10;
+                grid-row-start: 1;
+                color: $primary-light;
+                margin-left: rem(28);
+                &--btn {
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                    color: $primary-medium;
+                }
+                &--btn:hover {
+                    color: $primary-light;
+                }
+            }
+            &--text {
+                grid-column-start: 1;
+                grid-column-end: 10;
+                grid-row-start: 3;
+                font-family: $sansSerif-initial;
+                font-size: rem(18);
+                color: $primary-dark;
+            }
+        }
+        &--article-02 {
+            margin: rem(36) 0 rem(36) 0;
+            font-size: rem(16);
+            color: $primary-medium;
+            &--text {
+                font-family: $sansSerif-initial;
+            }
+            &--list li {
+                font-size: rem(16);
+                margin: rem(18) 0 rem(18) rem(18);
+                list-style: none;
+                font-family: $sansSerif-initial;
+            }
+        }
+    }
+    // < ARTICLE > 01
+    &__article-01 {
+        font-size: rem(14);
+        @include articleBasicStyle;
+        &--title {
+            font-weight: 100;
+        }
+        &--text {
+            margin: rem(12) 0 rem(24) 0;
+        }
+    }
+    // < ARTICLE  > 02
+    &__article-02 {
+        font-size: rem(12);
+        @include articleBasicStyle;
+        &--title {
+            font-weight: 100;
+        }
+        &--text {
+            margin: rem(12) 0 rem(24) 0;
+        }
+        &--list {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            &-item {
+                margin-right: rem(4);
+                @include button-styles;
+                &--link {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: rem(14);
+                }
+            }
+            &-item:hover {
+                background-color: $secondary-dark;
+                transform: scale(1.05);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+// < SECTION > form
+.main-form {
+    margin-top: rem(48);
+    &__title {
+        color: $primary-dark;
+        font-weight: 100;
+        font-family: $sansSerif-initial;
+        margin-bottom: rem(12);
+    }
+    // form
+
+    &__comments {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: rem(12);
+        &--label-input-name {
+            @include inputsFormBasicStyle;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        &--label-input-email {
+            @include inputsFormBasicStyle;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        &--label-input-web {
+            @include inputsFormBasicStyle;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+        &--label-textarea {
+            @include inputsFormBasicStyle;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        &--input-name,
+        &--input-email,
+        &--input-web {
+            @include inputsFormBasicStyle;
+        }
+        &--textarea {
+            width: 100%;
+            @include inputsFormBasicStyle;
+        }
+        &--label-button {
+            grid-row: 4;
+            grid-column-end: 5;
+            display: flex;
+            flex-direction: column;
+        }
+        &--button {
+            align-self: flex-end;
+            @include button-styles;
+            padding: rem(8) rem(16) rem(8) rem(16);
+            text-transform: uppercase;
+            background-color: $secondary-medium;
+        }
+        &--button:hover {
+            background-color: $secondary-ligth;
+            color: $secondary-dark;
+            font-weight: 600;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 1px 8px 2px $secondary-ligth;
+        }
+    }
+}
+
+// COMPLEMENTARY
+
+// highlighter into text
+.highlighter {
+    color: $secondary-medium;
+}
+// icon -> list -> < article > 02
+.fa-caret-right {
+    color: $secondary-medium;
+    margin-right: rem(8);
+}

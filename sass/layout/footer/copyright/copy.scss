@@ -1,0 +1,32 @@
+@import "../../../core/functions";
+@import "../../../core/mixins";
+@import "../../../core/variables";
+
+.footer-copy {
+    width: 100%;
+    // this color hasn't variable because it is the only class that has transparency
+    background-color: #103570bb;
+    position: fixed;
+    bottom: 0;
+    color: $white;
+    padding: rem(12) rem(48) rem(12) rem(48);
+    &__container {
+        font-family: $sansSerif-secondary;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &--copyright {
+            font-family: $sansSerif-secondary;
+        }
+    }
+    &__list {
+        list-style: none;
+        font-family: $sansSerif-secondary;
+
+        &--link {
+            padding-right: rem(16);
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
