@@ -1,11 +1,13 @@
 {
-  "name": "varadero-software-maquetacion",
-  "version": "1.0.0",
-  "description": "prueba-tecnica",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w sass/ -o css/"
-  },
-  "author": "estibaliz-barato",
-  "license": "ISC"
+    "name": "varadero-software-maquetacion",
+    "version": "1.0.0",
+    "homepage": "./",
+    "description": "prueba-tecnica",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "docs": "rm -rf docs && ./node_modules/.bin/gulp docs",
+        "sass": "node-sass -w sass/ -o css/"
+    },
+    "author": "estibaliz-barato",
+    "license": "ISC"
 }
