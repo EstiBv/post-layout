@@ -1,0 +1,8 @@
+# Public folder
+public
+
+# Dependency directories
+node_modules/
+
+# vscode
+.vscode
